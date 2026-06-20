@@ -1,4 +1,5 @@
 #in this app hashtags added.
+#FLASK APP
 from flask import Flask, render_template
 app = Flask(__name__)
 
