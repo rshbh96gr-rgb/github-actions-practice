@@ -16,6 +16,11 @@ jobs:
     # this step will automatically clone the code tocurrent bracnch of the runner.
       - name: checkout/clone the code
         uses: actions/checkout@v7
+         # Step 2: Install Python using the official action
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11' # Specify your required version
       
       - name: Install linter
         run: pip install ruff
