@@ -1,0 +1,24 @@
+# wht is the goal of workflow
+
+# goal: when soemone chnages the code , the linter will check the syntax, format indentation is correct or not.
+
+name: Auto Linter
+
+on:
+  push:
+    paths: "*.py"
+
+jobs:
+  code:
+    runs-on: ubuntu-latest
+    # this step will automatically clone the code tocurrent bracnch of the runner.
+    steps:
+    # this step will automatically clone the code tocurrent bracnch of the runner.
+      - name: checkout/clone the code
+        uses: actions/checkout@v7
+      
+      - name: Install linter
+        run: pip install ruff
+
+
+        
